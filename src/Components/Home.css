@@ -1,0 +1,26 @@
+.dashboard-container {
+  margin-top: 50px;
+}
+
+.user-card {
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.user-card .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.user-card .card-text {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.user-card button {
+  width: 120px;
+  font-weight: bold;
+}
