@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import "./Home.css"
+import axios from "axios";
+import { BiSolidUserRectangle } from "react-icons/bi";
+
+
+
 
 export default function Home() {
   const [user, setuser] = useState({});
@@ -26,38 +30,46 @@ export default function Home() {
 
   const handleLogout = () => {
     navigate("/");
+    localStorage.removeItem("token")
   };
 
   return (
     <>
-    {/* <Container className="dashboard-container">
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <Card className="user-card shadow">
-            <Card.Body>
-              <Card.Title className="text-center">
-                Welcome, {user.name}
-              </Card.Title>
-              <Card.Text>
-                <strong>Phone:</strong> {user.phone}
-              </Card.Text>
-              <Card.Text>
-                <strong> Email:</strong> {user.email}
-              </Card.Text>
-              <div className="text-center">
-                <Button variant="danger" onClick={handleLogout}>
-                  Logout
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container> */}
-      <h1>welcome, {user.name}</h1>
+    <div className="container dashboard-container mt-5">
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <div className="card shadow">
+
+          <div className="card-body">
+            <h4 className="card-title text-center mb-4">
+              Welcome, {user.name}
+            </h4>
+
+            <p className="card-text">
+              <strong>Phone:</strong> {user.phone}
+            </p>
+
+            <p className="card-text">
+              <strong>Email:</strong> {user.email}
+            </p>
+
+            <div className="text-center mt-4">
+              <button
+                className="btn btn-danger"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* <h1>welcome, {user.name}</h1>
       <h2>your phone number is: {user.phone}</h2>
       <h2>Email: {user.email}</h2>
-      <button onClick={handleLogout}>logout</button>
+      <button onClick={handleLogout}>logout</button> */}
     </>
   );
 }

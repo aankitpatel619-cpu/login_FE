@@ -8,12 +8,6 @@ export default function Register() {
   const navigate = useNavigate();
   const { register, handleSubmit,formState:{errors} } = useForm();
 
-
-
-  //  const postregister = async () => {
-  //       let senddata = await axios.post("http://localhost:4000/register")
-  //   }
-
   const onSubmit = async (data) => {
         let body = {
             name : data.name,

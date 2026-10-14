@@ -19,6 +19,9 @@ function My_login() {
     });
     console.log(res.data,"res");
     
+    localStorage.setItem("token" ,res.data.token)
+        localStorage.setItem("id" ,res.data.user._id)
+
 
     if (res.data.login) {
       navigate(`/home/${res.data.user._id}`);
