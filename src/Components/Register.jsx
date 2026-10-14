@@ -22,7 +22,7 @@ export default function Register() {
             phone : data.phone,
             password : data.password
         }
-        let res = await axios.post("http://localhost:4000/register", body)
+        let res = await axios.post("https://login-be-zklv.onrender.com/register", body)
         alert("the data is stored successfully")
         
 

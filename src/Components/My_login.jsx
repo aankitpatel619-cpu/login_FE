@@ -13,7 +13,7 @@ function My_login() {
     console.log("Phone:", phone);
     console.log("Password:", password);
 
-    let res = await axios.post("http://localhost:4000/login", {
+    let res = await axios.post("https://login-be-zklv.onrender.com/login", {
       phone: phone,
       password: password,
     });

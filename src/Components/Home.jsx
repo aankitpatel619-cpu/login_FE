@@ -16,7 +16,7 @@ export default function Home() {
 
   const fetchuser = async () => {
     try {
-      const res = await axios.get(`http://localhost:4000/getbyid/${id}`);
+      const res = await axios.get(`https://login-be-zklv.onrender.com/getbyid/${id}`);
       setuser(res.data.res)
       console.log(res, "user");
     } catch (err) {
